@@ -48,7 +48,7 @@ const Home = () => {
         </article>
         <article>
           <h1 className="text-4xl font-bold mt-10 mb-10 text-center">Home</h1>
-          <p className="sm:px-20 mb-10">
+          <p className="sm:px-20 text-justify mb-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
             porta dignissim rhoncus. Nunc enim lacus, egestas sed consectetur
             sed, iaculis id ex. Donec aliquam augue vitae elit molestie, quis
