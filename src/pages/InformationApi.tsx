@@ -239,7 +239,7 @@ const InformationApi = () => {
             } `}
             onClick={handleLoadMore}
           >
-            <b>Ver más </b>
+            <b>See More </b>
             <article className="flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
