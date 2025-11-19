@@ -10,8 +10,10 @@ import { z } from 'zod';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import ErrorMessage from './ErrorMessage';
+import useTheme from '@hooks/useTheme';
 const Form: FC<FormProps> = ({ isLogin, action, onHandleSetAction }) => {
   const navigate = useNavigate();
+  const { theme } = useTheme();
   const schema = isLogin ? loginSchema : signupSchema;
   type FormData = z.infer<typeof signupSchema> | z.infer<typeof loginSchema>;
   const {
@@ -79,11 +81,17 @@ const Form: FC<FormProps> = ({ isLogin, action, onHandleSetAction }) => {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full">
-        <label className="input input-bordered flex items-center gap-2 mt-6">
+        <label
+          className={`${
+            theme === 'sunset' ? 'bg-white text-black' : 'bg-white text-black'
+          }input input-bordered flex items-center gap-2 mt-6`}
+        >
           <img src={user_icon} alt="" />
           <input
             {...register('username')}
-            className="grow"
+            className={`${
+              theme === 'sunset' ? 'bg-white text-black' : 'bg-white text-black'
+            } grow`}
             placeholder="UserName"
           />
         </label>
@@ -93,11 +101,21 @@ const Form: FC<FormProps> = ({ isLogin, action, onHandleSetAction }) => {
 
         {isLogin === false && (
           <>
-            <label className="input input-bordered flex items-center gap-2 mt-6">
+            <label
+              className={`${
+                theme === 'sunset'
+                  ? 'bg-white text-black'
+                  : 'bg-white text-black'
+              }input input-bordered flex items-center gap-2 mt-6`}
+            >
               <img src={email_icon} alt="" />
               <input
                 {...register('email')}
-                className="grow"
+                className={`${
+                  theme === 'sunset'
+                    ? 'bg-white text-black'
+                    : 'bg-white text-black'
+                } grow`}
                 placeholder="Email"
               />
             </label>
@@ -108,11 +126,17 @@ const Form: FC<FormProps> = ({ isLogin, action, onHandleSetAction }) => {
           </>
         )}
 
-        <label className="input input-bordered flex items-center gap-2 mt-6">
+        <label
+          className={`${
+            theme === 'sunset' ? 'bg-white text-black' : 'bg-white text-black'
+          }input input-bordered flex items-center gap-2 mt-6`}
+        >
           <img src={password_icon} alt="" />
           <input
             {...register('password')}
-            className="grow"
+            className={`${
+              theme === 'sunset' ? 'bg-white text-black' : 'bg-white text-black'
+            } grow`}
             placeholder="Password"
           />
         </label>
@@ -120,11 +144,17 @@ const Form: FC<FormProps> = ({ isLogin, action, onHandleSetAction }) => {
           <ErrorMessage message={errors.password?.message} />
         )}
 
-        <label className="input input-bordered flex items-center gap-2 mt-6">
+        <label
+          className={`${
+            theme === 'sunset' ? 'bg-white text-black' : 'bg-white text-black'
+          }input input-bordered flex items-center gap-2 mt-6`}
+        >
           <img src={password_icon} alt="" />
           <input
             {...register('confirmPassword')}
-            className="grow"
+            className={`${
+              theme === 'sunset' ? 'bg-white text-black' : 'bg-white text-black'
+            } grow`}
             placeholder="Password Confirm"
           />
         </label>
