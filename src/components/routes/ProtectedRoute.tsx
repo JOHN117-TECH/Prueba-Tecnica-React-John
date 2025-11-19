@@ -2,7 +2,7 @@ import { Navigate, Outlet } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import LoaderSpinner from '@components/LoaderSpinner';
 
-export default function ProtectedRoute() {
+const ProtectedRoute = () => {
   const isAuth = localStorage.getItem('auth') === 'true';
   const [loading, setLoading] = useState(true);
 
@@ -19,4 +19,6 @@ export default function ProtectedRoute() {
   if (loading) return <LoaderSpinner />;
 
   return <Outlet />;
-}
+};
+
+export default ProtectedRoute;

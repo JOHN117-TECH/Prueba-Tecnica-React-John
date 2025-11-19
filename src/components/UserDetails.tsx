@@ -1,8 +1,9 @@
 import useTheme from '@hooks/useTheme';
 import { UserDetailsProps } from '@interfaces/UserDetails';
 import { Users } from 'lucide-react';
+import { FC } from 'react';
 
-const UserDetails = ({ selectedUser }: UserDetailsProps) => {
+const UserDetails: FC<UserDetailsProps> = ({ selectedUser }) => {
   const { theme } = useTheme();
   return (
     <div

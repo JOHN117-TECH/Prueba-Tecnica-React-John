@@ -1,8 +1,9 @@
 import useTheme from '@hooks/useTheme';
 import { UserCardProps } from '@interfaces/UserCard';
 import { Users, Mail, Phone, Globe, Building } from 'lucide-react';
+import { FC } from 'react';
 
-const UserCard = ({ user, onClick }: UserCardProps) => {
+const UserCard: FC<UserCardProps> = ({ user, onClick }) => {
   const { theme } = useTheme();
   return (
     <div

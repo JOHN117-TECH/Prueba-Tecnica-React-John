@@ -1,8 +1,9 @@
 import useTheme from '@hooks/useTheme';
 import { SearchBarProps } from '@interfaces/SearchBar';
 import { Search } from 'lucide-react';
+import { FC } from 'react';
 
-const SearchBar = ({ searchTerm, onSearchChange }: SearchBarProps) => {
+const SearchBar: FC<SearchBarProps> = ({ searchTerm, onSearchChange }) => {
   const { theme } = useTheme();
 
   return (

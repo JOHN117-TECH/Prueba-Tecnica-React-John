@@ -12,7 +12,7 @@ import {
   UserDetails,
 } from '@components/index';
 
-function UserManagement() {
+const UserManagement = () => {
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const { theme } = useTheme();
   const { users, loading, error } = useUsers();
@@ -109,6 +109,6 @@ function UserManagement() {
       </div>
     </div>
   );
-}
+};
 
 export default UserManagement;
