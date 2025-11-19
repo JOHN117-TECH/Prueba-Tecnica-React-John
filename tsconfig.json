@@ -6,6 +6,9 @@
     "moduleResolution": "Node",
     "strict": true,
     "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
